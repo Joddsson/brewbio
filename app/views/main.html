@@ -1,11 +1,66 @@
-<div class="frontPage">
-  <div class="frontPageTop">
+<div ng-controller="MainCtrl" ng-cloak>
+  <div class="frontPage">
+    <div class="frontPageTop">
 
-  </div>
-  <div class="frontPageBottom">
+    </div>
+    <div class="frontPageIcon">
+      <img src="images/brewIcon.png" alt="Brew Bio Icon" />
+    </div>
+    <div class="frontPageBottom">
 
+    </div>
   </div>
-  <div class="frontPageIcon">
-    <img src="images/brewIcon.png" alt="Brew Bio Icon" />
+  <div class="mainPage container">
+    <md-grid-list md-cols-xs="6"
+                  md-cols-sm="2"
+                  md-cols-md="4"
+                  md-cols-gt-md="3"
+                  md-row-height-gt-md="1:1"
+                  md-row-height="2:2"
+                  md-gutter="12px"
+                  md-gutter-gt-sm="8px">
+        <md-grid-tile class="gray" md-rowspan="1" md-colspan-gt-sm="1" md-colspan="1">
+        <md-card>
+          <img src="../images/placeholder.jpg" class="md-card-image" alt="image caption">
+          <md-card-content>
+            <h2>Card headline</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </md-card-content>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button>View</md-button>
+          </md-card-actions>
+        </md-card>
+      </md-grid-tile>
+      <md-grid-tile class="gray" md-rowspan="1" md-colspan-gt-sm="1" md-colspan="1">
+      <md-card>
+        <img src="../images/placeholder.jpg" class="md-card-image" alt="image caption">
+        <md-card-content>
+          <h2>Card headline</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>View</md-button>
+        </md-card-actions>
+      </md-card>
+    </md-grid-tile>
+    <md-grid-tile class="gray" md-rowspan="1" md-colspan-gt-sm="1" md-colspan="1">
+      <md-card>
+        <img src="../images/placeholder.jpg" class="md-card-image" alt="image caption">
+        <md-card-content>
+          <h2>Card headline</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>View</md-button>
+        </md-card-actions>
+      </md-card>
+    </md-grid-tile>
+  </md-grid-list>
   </div>
 </div>
