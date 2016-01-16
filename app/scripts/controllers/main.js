@@ -8,11 +8,43 @@
  * Controller of the brewbioApp
  */
 angular.module('brewbioApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope) {
+    var baseImagePath = '../../app/images/';
+    $scope.Math = window.Math;
 
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.brews = [
+      {
+        brewStyleImage: baseImagePath + 'IPA',
+        brewStyle: 'IPA',
+        brewDiscription: 'IPA is my life, my struggle and pain itself.'
+      },
+      {
+        brewStyleImage: baseImagePath + 'STOUT',
+        brewStyle: 'Stout',
+        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        brewStyleImage: baseImagePath + 'BARLEYWINE',
+        brewStyle: 'Barleywine',
+        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        brewStyleImage: baseImagePath + 'IPA',
+        brewStyle: 'IPA',
+        brewDiscription: 'IPA is my life, my struggle and pain itself.'
+      },
+      {
+        brewStyleImage: baseImagePath + 'STOUT',
+        brewStyle: 'Stout',
+        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        brewStyleImage: baseImagePath + 'BARLEYWINE',
+        brewStyle: 'Barleywine',
+        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      }
     ];
+
+    $scope.rowspan = Math.round(($scope.brews.length)/3);
+    console.log($scope.rowspan);
   });

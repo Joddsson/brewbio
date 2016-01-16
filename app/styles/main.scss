@@ -50,4 +50,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 .mainPage {
   margin: 0px auto;
   margin-top: 120px;
+
+  .brewCards {
+    min-height: 500px;
+  }
+}
+
+.addBrewStyle {
+  float: right;
+  margin-right: 100px;
 }

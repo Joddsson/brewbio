@@ -1,4 +1,4 @@
-<div ng-controller="MainCtrl" ng-cloak>
+<div ng-controller="MainCtrl as mc">
   <div class="frontPage">
     <div class="frontPageTop">
 
@@ -11,56 +11,30 @@
     </div>
   </div>
   <div class="mainPage container">
-    <md-grid-list md-cols-xs="6"
-                  md-cols-sm="2"
-                  md-cols-md="4"
+    <md-grid-list md-cols-sm="1"
+                  md-cols-md="3"
                   md-cols-gt-md="3"
                   md-row-height-gt-md="1:1"
-                  md-row-height="2:2"
+                  md-row-height="1:1"
                   md-gutter="12px"
                   md-gutter-gt-sm="8px">
-        <md-grid-tile class="gray" md-rowspan="1" md-colspan-gt-sm="1" md-colspan="1">
-        <md-card>
+      <md-grid-tile ng-repeat="brew in brews"
+                    md-rowspan="1"
+                    md-colspan="1">
+        <md-card class="brewCards">
           <img src="../images/placeholder.jpg" class="md-card-image" alt="image caption">
           <md-card-content>
-            <h2>Card headline</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <h2>{{ brew.brewStyle }}</h2>
+            <p>{{ brew.brewDiscription }}</p>
           </md-card-content>
           <md-card-actions layout="row" layout-align="end center">
             <md-button>View</md-button>
           </md-card-actions>
         </md-card>
       </md-grid-tile>
-      <md-grid-tile class="gray" md-rowspan="1" md-colspan-gt-sm="1" md-colspan="1">
-      <md-card>
-        <img src="../images/placeholder.jpg" class="md-card-image" alt="image caption">
-        <md-card-content>
-          <h2>Card headline</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button>View</md-button>
-        </md-card-actions>
-      </md-card>
-    </md-grid-tile>
-    <md-grid-tile class="gray" md-rowspan="1" md-colspan-gt-sm="1" md-colspan="1">
-      <md-card>
-        <img src="../images/placeholder.jpg" class="md-card-image" alt="image caption">
-        <md-card-content>
-          <h2>Card headline</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button>View</md-button>
-        </md-card-actions>
-      </md-card>
-    </md-grid-tile>
-  </md-grid-list>
+    </md-grid-list>
   </div>
+  <md-button class="md-fab addBrewStyle" aria-label="Eat cake">
+    <md-icon md-svg-src="../images/ic_add_white_36px.svg"></md-icon>
+  </md-button>
 </div>
