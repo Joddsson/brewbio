@@ -8,9 +8,8 @@
  * Controller of the brewbioApp
  */
 angular.module('brewbioApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $mdDialog) {
     var baseImagePath = '../../app/images/';
-    $scope.Math = window.Math;
 
     $scope.brews = [
       {
@@ -40,6 +39,13 @@ angular.module('brewbioApp')
       }
     ];
 
-    $scope.rowspan = Math.round(($scope.brews.length)/3);
-    console.log($scope.rowspan);
+    $scope.addBrewStyle = function(ent) {
+      console.log('Yolo swag' + ent);
+
+      $mdDialog.show({
+        templateUrl: '../../views/addBrewstyleModal.html',
+        clickOutsideToClose: true,
+        parent: angular.element(document.body)
+      });
+    };
   });
