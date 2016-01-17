@@ -52,3 +52,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     min-height: 500px;
   }
 }
+
+.addBrewstyleModal{
+  flex: 50;
+
+  .createBrewstyle {
+    float: right;
+  }
+}

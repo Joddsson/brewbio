@@ -1,23 +1,26 @@
 <div ng-controller="MainCtrl">
-  <md-dialog aria-label="Add Brewstyle" ng-cloak>
-    <md-content layout-padding>
-      <form name="brewstyleForm">
-        <md-input-container class="md-block">
-          <label>Brewstyle</label>
-          <input required name="brewstyle" ng-model="BrewstyleForm.brewstyle">
-          <div ng-messages="brewstyleForm.brewstyle.$error">
-            <div ng-message="required">Enter a brewstyle</div>
-          </div>
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label>Discription</label>
-          <input required name="discription" ng-model="BrewstyleForm.discription">
-          <div ng-messages="brewstyleForm.discription.$error">
-            <div ng-message="required">Enter the brewstyle discription</div>
-          </div>
-        </md-input-container>
-        <md-button>Create</md-button>
-      </form>
-    </md-content>
+  <md-dialog class="addBrewstyleModal" aria-label="Add Brewstyle" ng-cloak>
+    <form name="createBrewstyleForm">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Trying out a new style, are we? Good for you!</h2>
+        </div>
+      </md-toolbar>
+      <md-input-container class="md-block">
+        <label>Brewstyle</label>
+        <input required name="brewstyle" ng-model="brewBio.brewstyle">
+        <div ng-messages="createBrewstyleForm.brewstyle.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>Discription</label>
+        <input required name="discription" ng-model="brewBio.discription">
+        <div ng-messages="createBrewstyleForm.discription.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+      <md-button>Create</md-button>
+    </form>
   </md-dialog>
 </div>

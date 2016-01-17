@@ -10,7 +10,6 @@
 angular.module('brewbioApp')
   .controller('MainCtrl', function ($scope, $mdDialog) {
     var baseImagePath = '../../app/images/';
-
     $scope.brews = [
       {
         brewStyleImage: baseImagePath + 'IPA',
@@ -40,12 +39,10 @@ angular.module('brewbioApp')
     ];
 
     $scope.addBrewStyle = function(ent) {
-      console.log('Yolo swag' + ent);
-
+      console.log('DEBUG:' + ent);
       $mdDialog.show({
         templateUrl: '../../views/addBrewstyleModal.html',
-        clickOutsideToClose: true,
-        parent: angular.element(document.body)
+        clickOutsideToClose: true
       });
     };
   });
