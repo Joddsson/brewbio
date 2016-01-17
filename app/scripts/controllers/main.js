@@ -16,32 +16,27 @@ angular.module('brewbioApp')
       {
         brewStyleImage: baseImagePath + 'IPA',
         brewStyle: 'IPA',
-        brewDiscription: 'IPA is my life, my struggle and pain itself.'
+        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.'
       },
       {
         brewStyleImage: baseImagePath + 'STOUT',
         brewStyle: 'Stout',
-        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.'
       },
       {
         brewStyleImage: baseImagePath + 'BARLEYWINE',
         brewStyle: 'Barleywine',
-        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.',
       },
       {
         brewStyleImage: baseImagePath + 'IPA',
         brewStyle: 'IPA',
-        brewDiscription: 'IPA is my life, my struggle and pain itself.'
+        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.'
       },
       {
         brewStyleImage: baseImagePath + 'STOUT',
         brewStyle: 'Stout',
-        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      },
-      {
-        brewStyleImage: baseImagePath + 'BARLEYWINE',
-        brewStyle: 'Barleywine',
-        brewDiscription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.',
       }
     ];
 

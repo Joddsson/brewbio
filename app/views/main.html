@@ -11,30 +11,34 @@
     </div>
   </div>
   <div class="mainPage container">
+    <md-content>
+
+    </md-content>
     <md-grid-list md-cols-sm="1"
                   md-cols-md="3"
                   md-cols-gt-md="3"
-                  md-row-height-gt-md="1:1"
+                  md-row-height-gt-md="2:3"
                   md-row-height="1:1"
                   md-gutter="12px"
                   md-gutter-gt-sm="8px">
       <md-grid-tile ng-repeat="brew in brews"
                     md-rowspan="1"
-                    md-colspan="1">
+                    md-colspan="1"
+                    class="brewRow">
         <md-card class="brewCards">
           <img src="../images/placeholder.jpg" class="md-card-image" alt="image caption">
           <md-card-content>
             <h2>{{ brew.brewStyle }}</h2>
             <p>{{ brew.brewDiscription }}</p>
           </md-card-content>
-          <md-card-actions layout="row" layout-align="end center">
-            <md-button>View</md-button>
+          <md-card-actions layout="row" layout-align="start">
+            <md-button class="viewBrewStyle">View</md-button>
           </md-card-actions>
         </md-card>
       </md-grid-tile>
+      <md-button class="md-fab md-fab-bottom-right" aria-label="Eat cake">
+        <md-icon md-svg-src="../images/ic_add_white_36px.svg"></md-icon>
+      </md-button>
     </md-grid-list>
   </div>
-  <md-button class="md-fab addBrewStyle" aria-label="Eat cake">
-    <md-icon md-svg-src="../images/ic_add_white_36px.svg"></md-icon>
-  </md-button>
 </div>
