@@ -11,16 +11,18 @@
     </div>
   </div>
   <div class="mainPage container">
-    <md-grid-list md-cols-sm="1"
-                  md-cols-gt-sm="2"
-                  md-cols-gt-md="3"
-                  md-row-height-sm="1:1"
-                  md-row-height-gt-sm="1:2"
-                  md-row-height-gt-md="2:3"
-                  md-row-height-gt-lg="2:3"
+    <md-grid-list md-cols-xs="1"
+                  md-cols-sm="1"
+                  md-cols-md="2"
+                  md-cols-lg="3"
+                  md-row-height-xs="2:3"
+                  md-row-height-sm="2:2"
+                  md-row-height-md="2:3"
+                  md-row-height-lg="2:3"
+                  md-gutter-xs="12px"
                   md-gutter-sm="12px"
-                  md-gutter-gt-sm="12px"
-                  md-gutter-gt-lg="12px">
+                  md-gutter-md="12px"
+                  md-gutter-lg="12px">
       <md-grid-tile ng-repeat="brew in brews"
                     md-rowspan-md="1"
                     md-colspan-lg="1"
