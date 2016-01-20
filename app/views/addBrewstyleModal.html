@@ -1,26 +1,32 @@
-<div ng-controller="MainCtrl">
+<div ng-controller="BrewCtrl">
   <md-dialog class="addBrewstyleModal" aria-label="Add Brewstyle" ng-cloak>
     <form name="createBrewstyleForm">
       <md-toolbar>
-        <div class="md-toolbar-tools">
+        <div class="md-toolbar-tools modalToolbar">
           <h2>Trying out a new style, are we? Good for you!</h2>
         </div>
       </md-toolbar>
-      <md-input-container class="md-block">
-        <label>Brewstyle</label>
-        <input required name="brewstyle" ng-model="brewBio.brewstyle">
-        <div ng-messages="createBrewstyleForm.brewstyle.$error">
-          <div ng-message="required">This is required.</div>
+      <md-dialog-content style="max-width:800px;max-height:800px;">
+        <div class="md-dialog-content">
+          <md-input-container class="md-block">
+            <label>Brewstyle</label>
+            <input required name="brewstyle" ng-model="brewBio.brewstyle">
+            <div ng-messages="createBrewstyleForm.brewstyle.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Discription</label>
+            <textarea maxlength="250" required name="discription" ng-model="brewBio.discription" />
+            <div ng-messages="createBrewstyleForm.discription.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block createBrewstyle">
+            <md-button>Create</md-button>
+          </md-input-container>
         </div>
-      </md-input-container>
-      <md-input-container class="md-block">
-        <label>Discription</label>
-        <input required name="discription" ng-model="brewBio.discription">
-        <div ng-messages="createBrewstyleForm.discription.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
-      </md-input-container>
-      <md-button>Create</md-button>
+      </md-dialog-content>
     </form>
   </md-dialog>
 </div>

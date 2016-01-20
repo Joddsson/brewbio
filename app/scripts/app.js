@@ -19,19 +19,21 @@ angular
     'ui.bootstrap',
     'ngMaterial'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/:brewStyle', {
+        templateUrl: 'views/brew.html',
+        controller: 'BrewCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
+
+      // Remove # from URL.
+      $locationProvider.html5Mode(true);
   });
