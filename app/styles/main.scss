@@ -56,7 +56,9 @@ $assistGreen: #C8F7C5;
 
 .mainPage {
   .brewCards {
+    display: block;
     min-height: 500px;
+    max-width: 600px;
   }
 }
 

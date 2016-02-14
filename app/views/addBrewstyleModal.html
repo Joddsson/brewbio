@@ -1,6 +1,6 @@
-<div ng-controller="BrewCtrl">
+<div ng-controller="MainCtrl">
   <md-dialog class="addBrewstyleModal" aria-label="Add Brewstyle" ng-cloak>
-    <form name="createBrewstyleForm">
+    <form name="createBrewstyleForm" ng-submit="addBrewStyle()">
       <md-toolbar>
         <div class="md-toolbar-tools modalToolbar">
           <h2>Trying out a new style, are we? Good for you!</h2>
@@ -23,7 +23,7 @@
             </div>
           </md-input-container>
           <md-input-container class="md-block createBrewstyle">
-            <md-button>Create</md-button>
+            <md-button type="submit">Create</md-button>
           </md-input-container>
         </div>
       </md-dialog-content>

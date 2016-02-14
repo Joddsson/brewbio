@@ -9,5 +9,6 @@
  */
 angular.module('brewbioApp')
   .controller('BrewCtrl', function () {
-    console.log('yolooosweeg');
+    console.log('sdadsasd');
+
   });

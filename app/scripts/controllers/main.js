@@ -8,41 +8,25 @@
  * Controller of the brewbioApp
  */
 angular.module('brewbioApp')
-  .controller('MainCtrl', function ($scope, $mdDialog) {
-    var baseImagePath = '../../app/images/';
-    $scope.brews = [
-      {
-        brewStyleImage: baseImagePath + 'IPA',
-        brewStyle: 'IPA',
-        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.'
-      },
-      {
-        brewStyleImage: baseImagePath + 'STOUT',
-        brewStyle: 'Stout',
-        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.'
-      },
-      {
-        brewStyleImage: baseImagePath + 'BARLEYWINE',
-        brewStyle: 'Barleywine',
-        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.',
-      },
-      {
-        brewStyleImage: baseImagePath + 'IPA',
-        brewStyle: 'IPA',
-        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.'
-      },
-      {
-        brewStyleImage: baseImagePath + 'STOUT',
-        brewStyle: 'Stout',
-        brewDiscription: 'Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery.',
-      }
-    ];
+  .controller('MainCtrl', function ($scope, $mdDialog, brewstyleFactory) {
+    $scope.brews = brewstyleFactory.brewstyles;
+    $scope.brewImage = '../../images/placeholder.jpg'
 
-    $scope.addBrewStyle = function(ent) {
-      console.log('DEBUG:' + ent);
+    $scope.openBrewstyleModal = function() {
       $mdDialog.show({
         templateUrl: '../../views/addBrewstyleModal.html',
         clickOutsideToClose: true
       });
+    };
+
+    $scope.addBrewStyle = function() {
+      console.log($scope.brewBio.brewstyle);
+      var brewStyle = {
+        brewStyleImage: '../../app/images/BARLEYWINE',
+        brewStyle: $scope.brewBio.brewstyle,
+        brewDiscription: $scope.brewBio.discription
+      };
+
+      brewstyleFactory.addBrewstyle(brewStyle);
     };
   });

@@ -1,4 +1,4 @@
-<div ng-controller="MainCtrl as mc">
+<div ng-controller="MainCtrl" ng-app="brewStylesFactory">
   <div class="frontPage">
     <div class="frontPageTop">
 
@@ -45,7 +45,7 @@
       </md-grid-tile>
       <md-button class="md-fab md-fab-bottom-right"
                  aria-label="Add brewstyle"
-                 ng-click="addBrewStyle($event)">
+                 ng-click="openBrewstyleModal($event)">
         <md-icon md-svg-src="../images/ic_add_white_36px.svg"></md-icon>
       </md-button>
     </md-grid-list>
