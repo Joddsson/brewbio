@@ -8,7 +8,7 @@
  * Controller of the brewbioApp
  */
 angular.module('brewbioApp')
-  .controller('BrewCtrl', function () {
-    console.log('sdadsasd');
-
+  .controller('BrewCtrl', function ($scope, brewfactory) {
+    $scope.homeBrews = brewfactory.getBrews();
+    $scope.brewImage = '../../images/placeholder.jpg';
   });

@@ -10,7 +10,7 @@
 angular.module('brewbioApp')
   .controller('MainCtrl', function ($scope, $mdDialog, brewstyleFactory) {
     $scope.brews = brewstyleFactory.brewstyles;
-    $scope.brewImage = '../../images/placeholder.jpg'
+    $scope.brewImage = '../../images/placeholder.jpg';
 
     $scope.openBrewstyleModal = function() {
       $mdDialog.show({
@@ -28,5 +28,6 @@ angular.module('brewbioApp')
       };
 
       brewstyleFactory.addBrewstyle(brewStyle);
+      $mdDialog.hide();
     };
   });
