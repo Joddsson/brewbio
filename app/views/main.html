@@ -6,6 +6,9 @@
     <div class="frontPageIcon">
       <img src="images/brewIcon.png" alt="Brew Bio Icon" />
     </div>
+    <div class="frontPageText">
+      <h1 class="tlt" data-in-effect="fadeIn">BrewBio</h1>
+    </div>
     <div class="frontPageBottom">
 
     </div>
@@ -23,7 +26,7 @@
                   md-gutter-sm="12px"
                   md-gutter-md="12px"
                   md-gutter-lg="12px">
-      <md-grid-tile ng-repeat="brew in brews"
+      <md-grid-tile ng-repeat="brew in brews | filter:filters"
                     md-rowspan-md="1"
                     md-colspan-lg="1"
                     md-colspan="1"
@@ -37,7 +40,7 @@
             <p>{{ brew.brewStyleDiscription }}</p>
           </md-card-content>
           <md-card-actions layout="row" layout-align="start">
-            <md-button href="/{{ brew.brewStyle }}" class="viewBrewStyle">
+            <md-button ng-click="filters.brewStyle=brew.brewStyle" class="viewBrewStyle">
               View
             </md-button>
           </md-card-actions>
@@ -47,6 +50,11 @@
                  aria-label="Add brewstyle"
                  ng-click="openBrewstyleModal($event)">
         <md-icon md-svg-src="../images/ic_add_white_36px.svg"></md-icon>
+      </md-button>
+      <md-button  class="md-fab md-primary md-fab-bottom-right clearFilter"
+                  aria-label="Clear filter"
+                  ng-click="filters.brewStyle=''">
+          <md-icon><i class="fa fa-eraser" aria-hidden="true"></i></md-icon>
       </md-button>
     </md-grid-list>
   </div>

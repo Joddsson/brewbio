@@ -8,6 +8,7 @@ $mainBlue:  #2574A9;
 $mainBeige: #EEEEEE;
 $mainGreen: #29c27f;
 $assistGreen: #C8F7C5;
+$contrastYellow: #f1c40f;
 
 
 .frontPage {
@@ -52,13 +53,32 @@ $assistGreen: #C8F7C5;
       transform: translate(-50%, -50%);
     }
   }
+
+  .frontPageText h1 {
+    color: $contrastYellow;
+    font-family: 'Lobster', cursive;
+    font-size: 140px;
+    width: 500px;
+    padding-bottom: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
+
 
 .mainPage {
   .brewCards {
     display: block;
     min-height: 500px;
     max-width: 600px;
+  }
+
+  .clearFilter {
+    margin-right: 80px;
   }
 }
 

@@ -9,6 +9,8 @@
  */
 angular.module('brewbioApp')
   .controller('MainCtrl', function ($scope, $mdDialog, brewstyleFactory) {
+    $('.tlt').textillate();
+    $scope.filters = {};
     $scope.brews = brewstyleFactory.brewstyles;
     $scope.brewImage = '../../images/placeholder.jpg';
 

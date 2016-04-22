@@ -35,6 +35,8 @@ module.exports = function(config) {
       'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-messages/angular-messages.js',
       'bower_components/angular-material/angular-material.js',
+      'bower_components/letteringjs/jquery.lettering.js',
+      'bower_components/textillate/jquery.textillate.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/fullpage.js/jquery.fullPage.js',
       'bower_components/fullpage.js/vendors/jquery.easings.min.js',
